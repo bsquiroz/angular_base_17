@@ -7,4 +7,4 @@ import { Component } from '@angular/core';
   imports: [CommonModule],
   templateUrl: './defer-views.component.html',
 })
-export class DeferViewsComponent {}
+export default class DeferViewsComponent {}

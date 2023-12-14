@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   selector: 'app-control-flow',
   standalone: true,
   imports: [CommonModule],
-  template: './control-flow-component.html',
+  templateUrl: './control-flow.component.html',
 })
-export class ControlFlowComponent {}
+export default class ControlFlowComponent {}

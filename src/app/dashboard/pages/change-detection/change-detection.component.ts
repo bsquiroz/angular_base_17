@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   selector: 'app-change-detection',
   standalone: true,
   imports: [CommonModule],
-  template: './chage-detection.component.html',
+  templateUrl: './change-detection.component.html',
 })
-export class ChangeDetectionComponent {}
+export default class ChangeDetectionComponent {}
