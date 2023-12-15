@@ -1,1 +1,39 @@
-<p>defer-options works!</p>
+<app-title title="Defer Options / Triggers" />
+
+<section class="flex flex-col gap-2">
+    <section>
+        <h1 class="text-2xl">Interations</h1>
+
+        @defer (on interaction) {
+        <app-heavy-loaders-fast cssStyles="bg-blue-500 h-96">
+            <span>On interation</span>
+        </app-heavy-loaders-fast>
+        }@placeholder {
+        <app-loading isText="Click on component" />
+        }
+    </section>
+
+    <section>
+        <button #btnInteraction class="px-5 py-2 bg-blue-500 rounded-sm text-white">Click me</button>
+
+        @defer (on interaction(btnInteraction)) {
+        <app-heavy-loaders-fast cssStyles="bg-red-500 h-96">
+            <span>On interation with button</span>
+        </app-heavy-loaders-fast>
+        }@placeholder {
+        <app-loading />
+        }
+
+    </section>
+
+    <section>
+        @defer (on hover) {
+        <app-heavy-loaders-fast cssStyles="bg-yellow-500 h-96">
+            <span>On hover with button</span>
+        </app-heavy-loaders-fast>
+        }@placeholder {
+        <app-loading />
+        }
+
+    </section>
+</section>
