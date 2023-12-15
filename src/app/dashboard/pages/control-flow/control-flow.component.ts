@@ -22,7 +22,10 @@ export default class ControlFlowComponent {
     'svelte',
   ]);
 
+  public isStyleCustom = signal(false);
+
   public toggleContent() {
     this.showContent.update((value) => !value);
+    this.isStyleCustom.update((value) => !value);
   }
 }
