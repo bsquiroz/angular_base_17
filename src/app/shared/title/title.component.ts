@@ -7,12 +7,10 @@ import { Component, Input, booleanAttribute } from '@angular/core';
   imports: [CommonModule],
   template: `<h1
     [class]="
-      withShadow
-        ? 'shadow mb-5 shadow-blue-200 p-5 text-3xl font-bold'
-        : 'mb-5 p-5 text-3xl font-bold'
+      'mb-5 p-5 text-3xl font-bold ' + (withShadow && 'shadow shadow-blue-200 ')
     "
   >
-    {{ title }} - {{ withShadow }}
+    {{ title }}
   </h1>`,
 })
 export class TitleComponent {
