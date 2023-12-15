@@ -15,4 +15,23 @@ import { TitleComponent } from '@app/shared/title/title.component';
   ],
   templateUrl: './defer-views.component.html',
 })
-export default class DeferViewsComponent {}
+export default class DeferViewsComponent {
+  public dataComponents = [
+    {
+      name: 'component heavy 1',
+      cssStyles: 'bg-red-500',
+    },
+    {
+      name: 'component heavy 2',
+      cssStyles: 'bg-blue-600',
+    },
+    {
+      name: 'component heavy 3',
+      cssStyles: 'bg-green-500',
+    },
+    {
+      name: 'component heavy 4',
+      cssStyles: 'bg-yellow-500',
+    },
+  ];
+}

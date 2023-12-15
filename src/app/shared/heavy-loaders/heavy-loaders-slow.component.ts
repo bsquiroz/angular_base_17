@@ -8,11 +8,14 @@ import { Component, Input } from '@angular/core';
   template: `<section
     [ngClass]="['h-96 flex justify-center items-center', cssStyles]"
   >
-    <h1>Contenido del <strong>HeavyLoadersSlowComponent</strong></h1>
+    <h1>
+      Contenido del <strong>{{ title }}</strong>
+    </h1>
   </section>`,
 })
 export class HeavyLoadersSlowComponent {
   @Input({ required: true }) cssStyles = '';
+  @Input({ required: true }) title = '';
 
   constructor() {
     const start = Date.now();

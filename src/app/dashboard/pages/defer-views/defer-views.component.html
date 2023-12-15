@@ -1,22 +1,12 @@
 <section class="grid grid-cols-1">
     <app-title title="Defer Views" />
 
+    @for (item of dataComponents; track $index) {
     @defer () {
-    <app-heavy-loaders-slow cssStyles="bg-red-500" />
+    <app-heavy-loaders-slow cssStyles="{{item.cssStyles}}" title="{{item.name}}" />
     } @placeholder {
     <app-loading />
     }
-
-    @defer () {
-    <app-heavy-loaders-slow cssStyles="bg-green-500" />
-    } @placeholder {
-    <app-loading />
-    }
-
-    @defer () {
-    <app-heavy-loaders-slow cssStyles="bg-blue-500" />
-    } @placeholder {
-    <app-loading />
     }
 
 
