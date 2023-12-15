@@ -32,7 +32,6 @@ export default class ChangeDetectionComponent {
   constructor() {
     setTimeout(() => {
       this.frameworkAsSignal.update((value) => ({ ...value, name: 'React' }));
-      console.log('Hecho!');
     }, 3000);
   }
 }

@@ -25,13 +25,5 @@ export default class DeferViewsComponent {
       name: 'component heavy 2',
       cssStyles: 'bg-blue-600',
     },
-    {
-      name: 'component heavy 3',
-      cssStyles: 'bg-green-500',
-    },
-    {
-      name: 'component heavy 4',
-      cssStyles: 'bg-yellow-500',
-    },
   ];
 }

@@ -1,5 +1,5 @@
 <section class="grid grid-cols-1">
-    <app-title title="Defer Views" />
+    <app-title title="Defer Views / Blocks" />
 
     @for (item of dataComponents; track $index) {
     @defer () {
@@ -7,6 +7,18 @@
     } @placeholder {
     <app-loading />
     }
+    }
+
+    @defer (on viewport) {
+    <app-heavy-loaders-slow cssStyles="bg-yellow-500" title="component heavy 3 - on viewport" />
+    } @placeholder {
+    <app-loading />
+    }
+
+    @defer (on viewport) {
+    <app-heavy-loaders-slow cssStyles="bg-green-500" title="component heavy 4 - on viewport" />
+    } @placeholder {
+    <app-loading />
     }
 
 
